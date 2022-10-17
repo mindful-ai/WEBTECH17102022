@@ -1,0 +1,2 @@
+To run this example you will need python: install it from python.org
+The Flask framework can be installed using the command: pip install flask
