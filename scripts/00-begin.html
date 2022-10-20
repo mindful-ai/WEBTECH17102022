@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <p name="para"></p>
+    <a href="" id="link">Some link!</a><br>
+    <input id="num" type="number" value="100">
+    <h5>Result = <span id="result"></span></h5>
+    <script>
+        var h = document.getElementsByTagName("h1");
+        var p = document.getElementsByName("para");
+        var a = document.getElementById("link");
+        console.log(h);
+        console.log(p);
+        console.log(a);
+        p[0].innerHTML = "My first experiment with JS DOM API!!";
+        h[0].innerHTML = "Hello World!"
+        a.href = "https://www.google.com";
+        h[0].style.color = "red";
+        p[0].style.backgroundColor = "aqua";
+
+        document.getElementById("num").onchange = function(){
+            document.getElementById("result").innerHTML = document.getElementById("num").value ** 2;
+        }
+        
+    </script>
+</body>
+</html>
