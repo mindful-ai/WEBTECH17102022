@@ -5,6 +5,18 @@ function getindeces(mainstr, substr){
     return indeces;
 }
 
+function capitalize(mainstr){
+
+}
+
+function maketitle(mainstr){
+
+}
+
+function formatstr(mainstr){
+
+}
+
 /*
 
 mainstr = "mississippi"
@@ -17,6 +29,18 @@ other possibilities:
 
 
 indeces.length -> number of ocurrences of the substring
+
+capitalize(mainstr) -> Mississippi
+
+maketitle("creating modules in node javascript environment") -> Treating Modules In Node Javascript Environment
+
+formatstr("french") -> F R E N C H
+
+removePuntuations(mainstr)
+<- Hi!, this is Raj. I am learning Node.js
+-> hi this is raj i am learning node js
+
+
 
 */
 
