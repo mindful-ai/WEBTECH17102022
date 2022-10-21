@@ -1,0 +1,33 @@
+// Everytime the submit button is clicked
+      document.getElementById("submit").onclick = function(){
+
+        // Read the inputs a and b
+        var opa = parseFloat(document.getElementById("ina").value);
+        var opb = parseFloat(document.getElementById("inb").value);
+
+        // Read which radio button is clicked
+        var op;
+        var radios = document.getElementsByName("op");
+        for(i = 0; i < radios.length; i++){
+          if(radios[i].checked){
+            op = radios[i].value;
+            break;
+          }
+        }
+
+        // Calculate the result
+
+        var result;
+        switch(op){
+
+          case "add": { result = opa + opb; break; }
+          case "sub": { result = opa - opb; break; }
+          case "mul": { result = opa * opb; break; }
+          case "div": { result = opa / opb; break; }
+        }
+
+        // Update the result
+        document.getElementById("result").innerHTML = result;
+
+      }
+      
