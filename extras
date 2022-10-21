@@ -55,3 +55,42 @@ var tablegen = function(val){
           parent.removeChild(parent.lastChild);
         }
       };
+     ------------------------------------------------------------------------------------------------------------
+     
+     $(document).ready(function(){ 
+
+          $("#submit").click(function(){
+
+            var opa = parseInt($("#ina").val());
+            var opb = parseInt($("#inb").val());
+            var op = $('input[name="op"]:checked').val();
+
+            var result;
+            switch(op){
+
+              case "add": { result = opa + opb; break; }
+              case "sub": { result = opa - opb; break; }
+              case "mul": { result = opa * opb; break; }
+              case "div": { result = opa / opb; break; }
+            }
+
+            $("#result").text(result);
+
+          })
+
+        })
+        
+        ------------------------------------------------------------------------------------------------------------
+        
+        var tablegen;
+        $(document).ready(function(){
+            tablegen = function(val){
+                $("#table").empty();
+                for(i = 1; i <= 10; i++){
+                    var child = $("<h3></h3>").text(val + ' X ' + i + ' = ' +(val*i));
+                    $("#table").append(child);
+                }
+            }
+        });
+        
+    
